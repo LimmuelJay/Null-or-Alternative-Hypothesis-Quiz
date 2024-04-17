@@ -1,0 +1,91 @@
+html,
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    background: #222;
+    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+      helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+    color: hotpink;
+    z-index: 0;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.background-image {
+    position: absolute;
+    left: 180px;
+    top: 20px;
+    z-index: -1;
+}
+
+.logo {
+    position: absolute;
+    height: 120px;
+    bottom: 490px;
+}
+
+.main-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 90px;
+}
+
+.bot-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 40px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    width: 60%;
+}
+
+h2 {
+    width: 60%;
+    text-align: center;
+}
+
+p {
+    width: 30%;
+}
+
+button {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 0;
+    font-size: 0.9rem;
+    height: 50px;
+    background: #888;
+    padding: 1rem;
+    color: white;
+    cursor: pointer;
+  }
+
+footer {
+    color: #888;;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+  }
