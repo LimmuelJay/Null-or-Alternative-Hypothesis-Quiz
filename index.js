@@ -84,58 +84,32 @@ const questions = [
     },
 ]
 
-console.log("CHECK_lenght", questions.length)
-
 const randomNumber = () => {
     const generatedNumber = Math.floor(Math.random() * questions.length);
     return generatedNumber;
 }
 
-// let auth = true
-
-const number = randomNumber();
-const question = questions[number].question;
-const answer = questions[number].answer;
+let number = randomNumber();
+let question = questions[number].question;
+let answer = questions[number].answer;
 document.querySelector(".questions").innerHTML = question;
 
-console.log("number", number)
-console.log("question", question)
-console.log("answer", answer)
+const nullOrAlternativeFuction = (answer, checkAnswer) => {
+    if (answer === checkAnswer) {
+        document.querySelector(".questions").innerHTML = "CORRECT";
+    } else {
+        document.querySelector(".questions").innerHTML = "WRONG";
+    } 
+
+    setTimeout(function() {
+        location.reload();
+    }, 2000)    
+}
 
 nulll.addEventListener("click", () => { 
-    // console.log("clicked null", randomNumber())
-        if (answer === "null") {
-
-            document.querySelector(".questions").innerHTML = "CORRECT";
-    
-            setTimeout(function() {
-                location.reload() 
-            }, 2000)
-    
-        } if (answer === "alternative") {
-            document.querySelector(".questions").innerHTML = "WRONG";
-    
-            setTimeout(function() {
-                location.reload() 
-            }, 2000)
-        }
+    nullOrAlternativeFuction("null", answer)
 })
 
 alternative.addEventListener("click", () => { 
-    // console.log("clicked alternative", randomNumber())
-        if (answer === "alternative") {
-            document.querySelector(".questions").innerHTML = "CORRECT";
-
-            setTimeout(function() {
-                location.reload() 
-            }, 2000)
-
-        } if (answer === "null") {
-            document.querySelector(".questions").innerHTML = "WRONG";
-
-            setTimeout(function() {
-                location.reload() 
-            }, 2000)
-        } 
+    nullOrAlternativeFuction("alternative", answer)
 })
-

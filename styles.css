@@ -59,16 +59,14 @@ body {
 h1 {
     text-align: center;
     font-size: 3rem;
-    width: 60%;
+    width: 50%;
 }
 
-h2 {
+.questions {
     width: 60%;
     text-align: center;
-}
-
-p {
-    width: 30%;
+    font-size: 1.4rem;
+    font-weight: 700;
 }
 
 button {
